@@ -33,7 +33,6 @@ set list
 set hlsearch
 set laststatus=2
 
-set syntax=on
 syntax enable
 set background=dark
 colorscheme solarized
