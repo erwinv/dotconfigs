@@ -34,5 +34,15 @@ set hlsearch
 set laststatus=2
 
 syntax enable
+set foldmethod=syntax
+colorscheme default
+"colorscheme solarized
 set background=dark
-colorscheme solarized
+let g:solarized_termcolors=256
+
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+let g:netrw_winsize=18
+
+set cursorline
