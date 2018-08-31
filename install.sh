@@ -15,18 +15,18 @@ for file in "${files[@]}"; do
     symlinktarget=$(readlink -e $file)
     symlinkfile="$HOME/$file"
 
-    echo "Installing (symlinking) $symlinkfile -> $symlinktarget ..."
+    echo "Creating symlink: $symlinkfile -> $symlinktarget ..."
 
     if [ -L $symlinkfile ]; then
         if [ -e $symlinkfile ]; then
-            echo "Target symlink $symlinkfile exists, skipping ..."
+            echo "Symlink and target exists, skipping ..."
             continue
         else
-            echo "Removing broken symlink $symlinkfile ..."
+            echo "Removing broken symlink ..."
             rm $symlinkfile
         fi
     elif [ -f $symlinkfile ]; then
-        echo "Target $symlinkfile exists as regular file, skipping ..."
+        echo "Symlink exists as regular file, skipping ..."
         continue
     fi
 
