@@ -1,14 +1,35 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-function makedir() {
-    mkdir -p $1
-}
+declare -a files=(
+    ".bash_profile"
+    ".bashrc"
+    ".vimrc"
+    ".vim/autoload/plug.vim"
+)
 
-function copy() {
-    cp -b -S '.bak' $1 $HOME/$2
-}
+for file in "${files[@]}"; do
+    if [ ! -f $file ]; then
+        continue
+    fi
 
-copy .vimrc
+    symlinktarget=$(readlink -e $file)
+    symlinkfile="$HOME/$file"
 
-makedir .vim/autoload/
-copy .vim/autoload/plug.vim .vim/autoload
+    echo "Installing (symlinking) $symlinkfile -> $symlinktarget ..."
+
+    if [ -L $symlinkfile ]; then
+        if [ -e $symlinkfile ]; then
+            echo "Target symlink $symlinkfile exists, skipping ..."
+            continue
+        else
+            echo "Removing broken symlink $symlinkfile ..."
+            rm $symlinkfile
+        fi
+    elif [ -f $symlinkfile ]; then
+        echo "Target $symlinkfile exists as regular file, skipping ..."
+        continue
+    fi
+
+    mkdir -p $(dirname $symlinkfile)
+    ln -s $symlinktarget $symlinkfile
+done
