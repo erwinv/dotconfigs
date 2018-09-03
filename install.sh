@@ -5,6 +5,7 @@ declare -a files=(
     ".bashrc"
     ".vimrc"
     ".vim/autoload/plug.vim"
+    ".npmrc"
 )
 
 for file in "${files[@]}"; do
@@ -32,4 +33,12 @@ for file in "${files[@]}"; do
 
     mkdir -p $(dirname $symlinkfile)
     ln -s $symlinktarget $symlinkfile
+done
+
+declare -a folders=(
+    ".npm-global"
+)
+
+for folder in "${folders[@]}"; do
+    mkdir -p $HOME/$folder
 done

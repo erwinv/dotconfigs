@@ -7,7 +7,7 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$HOME/bin:$PATH
+PATH=$HOME/.npm-global/bin:$HOME/bin:$PATH
 export PATH=$PATH
 export WORK="/var/fpwork/`whoami`"
 export TERM="xterm-256color"
@@ -40,6 +40,6 @@ case `hostname` in
     exec seesetenv vim=7.4 tmux=2.1 git=2.6.2 subversion=1.9.2 python=2.7.4 cmake=3.7.1 distcc=3.3 ag=0.23.0
 ;;
 "mnling94.apac.nsn-net.net")
-    exec seesetenv git=2.10.2 cmake=3.7.1 subversion=1.9.2
+    exec seesetenv git=2.10.2 cmake=3.7.1 subversion=1.9.2 node_js=6.9.1
 ;;
 esac
