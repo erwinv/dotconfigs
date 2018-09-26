@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+dotconfigsdir=$(dirname $(readlink -f $0))
+pushd $dotconfigsdir
+
 declare -a files=(
     ".bash_profile"
     ".bashrc"
@@ -43,3 +46,5 @@ declare -a folders=(
 for folder in "${folders[@]}"; do
     mkdir -p $HOME/$folder
 done
+
+popd
