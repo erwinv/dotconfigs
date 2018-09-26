@@ -6,6 +6,7 @@ declare -a files=(
     ".vimrc"
     ".vim/autoload/plug.vim"
     ".npmrc"
+    ".linsee.env"
 )
 
 for file in "${files[@]}"; do
