@@ -18,7 +18,7 @@ export ftp_proxy=$PROXY
 
 export EDITOR=vim
 
-if [[ echo `hostname` | egrep "mnling\d+.apac.nsn-net.net" ]]; then
+if [[ `hostname | egrep "mnling[0-9]+.apac.nsn-net.net"` ]]; then
     export WORK="/var/fpwork/`whoami`"
     source $HOME/.linsee.env
 fi
