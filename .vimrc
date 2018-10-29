@@ -47,3 +47,4 @@ let g:netrw_browse_split=4
 let g:netrw_winsize=18
 
 set cursorline
+set nowrap
