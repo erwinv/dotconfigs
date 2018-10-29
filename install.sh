@@ -31,6 +31,7 @@ for file in "${files[@]}"; do
             rm $symlinkfile
         fi
     elif [ -f $symlinkfile ]; then
+        diff $symlinkfile $symlinktarget -u --color
         echo "Symlink exists as regular file, skipping ..."
         continue
     fi

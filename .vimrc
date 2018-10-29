@@ -35,9 +35,10 @@ set laststatus=2
 
 syntax enable
 set foldmethod=syntax
-colorscheme default
-"colorscheme solarized
-set background=dark
+"colorscheme default
+colorscheme solarized
+set background=light
+"set background=dark
 let g:solarized_termcolors=256
 
 let g:netrw_banner=0

@@ -9,7 +9,6 @@ fi
 
 PATH=$HOME/.npm-global/bin:$HOME/bin:$PATH
 export PATH=$PATH
-export WORK="/var/fpwork/`whoami`"
 export TERM="xterm-256color"
 
 PROXY="http://cnhon1c-proxy.apac.nsn-net.net:8080"
@@ -19,4 +18,7 @@ export ftp_proxy=$PROXY
 
 export EDITOR=vim
 
-source $HOME/.linsee.env
+if [[ echo `hostname` | egrep "mnling\d+.apac.nsn-net.net" ]]; then
+    export WORK="/var/fpwork/`whoami`"
+    source $HOME/.linsee.env
+fi
