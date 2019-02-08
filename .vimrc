@@ -17,6 +17,8 @@ Plug 'ervandew/supertab'
 Plug 'gregsexton/gitv'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set expandtab
@@ -35,10 +37,10 @@ set laststatus=2
 
 syntax enable
 set foldmethod=syntax
-"colorscheme default
-colorscheme solarized
-set background=light
-"set background=dark
+colorscheme default
+"colorscheme solarized
+"set background=light
+set background=dark
 let g:solarized_termcolors=256
 
 let g:netrw_banner=0

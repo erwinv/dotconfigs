@@ -9,7 +9,7 @@ fi
 
 PATH=$HOME/.npm-global/bin:$HOME/bin:$PATH
 export PATH=$PATH
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 PROXY="http://cnhon1c-proxy.apac.nsn-net.net:8080"
 export https_proxy=$PROXY

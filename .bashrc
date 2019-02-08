@@ -7,3 +7,5 @@ fi
 
 # User-defined aliases and functions
 alias ll='ls -oh --group-directories-first --color=auto'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
