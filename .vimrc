@@ -17,7 +17,7 @@ Plug 'ervandew/supertab'
 Plug 'gregsexton/gitv'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
