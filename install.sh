@@ -9,6 +9,10 @@ declare -a files=(
     ".vimrc"
     ".vim/autoload/plug.vim"
     ".npmrc"
+    ".config/fish/functions/extract_recursive.fish"
+    ".config/fish/functions/untar_recursive.fish"
+    ".config/fish/functions/unzip_here.fish"
+    ".config/fish/functions/unzip_recursive.fish"
 )
 
 for file in "${files[@]}"; do
