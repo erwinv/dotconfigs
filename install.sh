@@ -9,6 +9,7 @@ declare -a files=(
     ".vimrc"
     ".vim/autoload/plug.vim"
     ".npmrc"
+    ".config/fish/functions/commit_loop.fish"
     ".config/fish/functions/extract_recursive.fish"
     ".config/fish/functions/untar_recursive.fish"
     ".config/fish/functions/unzip_here.fish"
