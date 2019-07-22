@@ -15,4 +15,5 @@ function commit_loop
         echo "Retrying..."
         svn commit --file $_flag_file
     end
+    date
 end

@@ -10,7 +10,7 @@ Plug 'bling/vim-bufferline'
 Plug 'kshenoy/vim-signature'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 Plug 'ervandew/supertab'
@@ -20,6 +20,8 @@ Plug 'scrooloose/syntastic'
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 call plug#end()
+
+nnoremap <silent> <C-p> :FZF<CR>
 
 set expandtab
 set shiftwidth=4
