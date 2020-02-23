@@ -14,6 +14,7 @@ declare -a files=(
     ".config/fish/functions/untar_recursive.fish"
     ".config/fish/functions/unzip_here.fish"
     ".config/fish/functions/unzip_recursive.fish"
+    ".config/fish/functions/loopback_audio.fish"
 )
 
 for file in "${files[@]}"; do

@@ -1,4 +1,9 @@
-# .bashrc
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -9,3 +14,5 @@ fi
 alias ll='ls -oh --group-directories-first --color=auto'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+exec fish

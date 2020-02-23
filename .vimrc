@@ -19,6 +19,8 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'keith/swift.vim'
+Plug 'udalov/kotlin-vim'
 call plug#end()
 
 nnoremap <silent> <C-p> :FZF<CR>

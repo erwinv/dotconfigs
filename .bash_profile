@@ -1,13 +1,12 @@
-# .bash_profile
+#
+# ~/.bash_profile
+#
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # User specific environment and startup programs
 
-PATH=$HOME/.npm-global/bin:$HOME/bin:$PATH
+PATH=node_modules/.bin:$HOME/.npm-global/bin:$HOME/bin:$PATH
 export PATH=$PATH
 export TERM="xterm-256color"
 
