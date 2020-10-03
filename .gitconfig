@@ -1,0 +1,16 @@
+[user]
+	email = erwin.villejo@gmail.com
+	name = Erwin Villejo
+	signingKey = 3621496458016D3AAA6F18A8B02860A12451BFBE
+[alias]
+	graph = log --graph --oneline --decorate HEAD
+[commit]
+	gpgSign = true
+[merge]
+	tool = meld
+[fetch]
+	prune = true
+[diff]
+	tool = meld
+[includeIf "gitdir:~/appsynth/"]
+	path = ~/code/appsynth/.gitconfig
