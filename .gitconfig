@@ -1,9 +1,11 @@
 [user]
-	email = erwin.villejo@gmail.com
+	email = erwinvillejo@gmail.com
 	name = Erwin Villejo
 	signingKey = 3621496458016D3AAA6F18A8B02860A12451BFBE
 [alias]
-	graph = log --graph --oneline --decorate HEAD
+	graph = log --graph --oneline --decorate
+	diffmeld  = difftool --dir-diff
+	mergemeld  = mergetool --dir-diff
 [commit]
 	gpgSign = true
 [merge]
@@ -12,5 +14,9 @@
 	prune = true
 [diff]
 	tool = meld
-[includeIf "gitdir:~/appsynth/"]
-	path = ~/code/appsynth/.gitconfig
+# [includeIf "gitdir:~/code/appsynth/"]
+# 	path = ~/code/appsynth/.gitconfig
+[init]
+	defaultBranch = main
+[safe]
+	directory = /opt/flutter

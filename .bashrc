@@ -1,18 +1,5 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+#[ -f /etc/bash.bashrc ] && source /etc/bash.bashrc
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" && -z ${BASH_EXECUTION_STRING} ]]; then
+    exec fish
 fi
-
-# User-defined aliases and functions
-alias ll='ls -oh --group-directories-first --color=auto'
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-exec fish
