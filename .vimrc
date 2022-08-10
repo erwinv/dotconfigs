@@ -21,6 +21,7 @@ Plug '/usr/bin/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
 Plug 'udalov/kotlin-vim'
+Plug 'dag/vim-fish'
 call plug#end()
 
 nnoremap <silent> <C-p> :FZF<CR>
@@ -43,8 +44,8 @@ syntax enable
 set foldmethod=syntax
 colorscheme default
 "colorscheme solarized
-"set background=light
-set background=dark
+set background=light
+"set background=dark
 let g:solarized_termcolors=256
 
 let g:netrw_banner=0

@@ -28,11 +28,12 @@ for file in "${files[@]}"; do
     symlinktarget=$(readlink -e $file)
     symlinkfile="$HOME/$file"
 
+    echo ""
     echo "Creating symlink: $symlinkfile -> $symlinktarget ..."
 
     if [ -L $symlinkfile ]; then
         if [ -e $symlinkfile ]; then
-            echo "Symlink and target exists, skipping ..."
+            echo "Symlink and target exists (already installed), nothing to do ..."
             continue
         else
             echo "Removing broken symlink ..."
